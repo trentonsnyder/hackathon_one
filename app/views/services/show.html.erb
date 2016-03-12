@@ -1,12 +1,15 @@
-<div class='center'>
+<div class='container'>
   <h3><%= @vehicle.carname %></h3>
-  <h4><%= @service.name %></h4>
-  <%= image_tag @service.avatar_url(:thumb) %>
-  <p><%= @service.date %></p>
-  <p>Provider: <%= @service.provider %></p>
-  <p><%= @service.mileage %> Miles</p>
-  <p><%= @service.description %></p>
-</div>
-
+  <h5><%= @service.name %></h5>
+    <ul>
+      <li>&nbsp&nbsp&nbsp&nbsp<%= @service.date %></li>
+      <li>&nbsp&nbsp&nbsp&nbspProvider: <%= @service.provider %></li>
+      <li>&nbsp&nbsp&nbsp&nbsp<%= @service.mileage %> Miles</li>
+      <li>&nbsp&nbsp&nbsp&nbsp<%= @service.description %></li>
+    </ul>
+    <%= image_tag @service.avatar_url(:thumb) %>
 <br />
 <%= link_to "Edit", edit_vehicle_service_path(@vehicle, @service), class: 'btn' %>
+<%= link_to 'Back', vehicle_path(@vehicle),class: 'btn' %>
+</div>
+
