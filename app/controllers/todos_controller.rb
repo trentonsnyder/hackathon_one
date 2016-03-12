@@ -16,7 +16,7 @@ class TodosController < ApplicationController
     @todo = current_user.todos.new(todo_params)
     if @todo.save
       flash[:notice] = "Successfully added item to Todo List!"
-      redirect_to vehicles_path
+      redirect_to(:back)
     else
       flash[:alert] = "Errors while saving Todo item."
       render :new
