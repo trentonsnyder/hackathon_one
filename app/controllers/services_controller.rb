@@ -2,7 +2,7 @@ class ServicesController < ApplicationController
   before_action :vehicle 
 
   def index
-    @services = @vehicle.service 
+    @services = @vehicle.services 
   end
 
   def show
@@ -43,7 +43,7 @@ class ServicesController < ApplicationController
   private
 
   def vehicle
-    @vehicle = Vehicle.find(params[:vehicle_id])
+    @vehicle = current_user.vehicles.find(params[:vehicle_id])
   end
 
   def service_params
