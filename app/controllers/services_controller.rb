@@ -20,6 +20,7 @@ class ServicesController < ApplicationController
     else 
       flash[:alert] = "Something went Wrong"
       render :new
+    end
   end
 
   def edit
