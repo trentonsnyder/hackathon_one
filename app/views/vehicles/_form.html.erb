@@ -1,0 +1,26 @@
+<div class='row'>
+  <%= form_for @vehicle do |f| %>
+    <div class='row'>
+      <div class="input-field col s12">
+      <%= f.text_field :make %>
+      <%= f.label :make, autofocus: true %>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="input-field col s12">
+      <%= f.text_area :model %>
+      <%= f.label :model %>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="input-field col s12">
+      <%= f.number_field :year, min: 1950, max: 2016, required: true %>
+      <%= f.label :year %>
+      </div>
+    </div>
+    
+    <%= f.submit 'Submit', class: 'btn black' %>
+  <% end %>
+</div>
