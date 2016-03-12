@@ -2,8 +2,8 @@
   <%= form_for @vehicle do |f| %>
     <div class='row'>
       <div class="input-field col s12">
-      <%= f.text_field :make %>
-      <%= f.label :make, autofocus: true %>
+      <%= f.text_field :make, autofocus: true, required: true %>
+      <%= f.label :make %>
       </div>
     </div>
 
