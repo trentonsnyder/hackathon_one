@@ -7,7 +7,8 @@ class CreateServices < ActiveRecord::Migration
       t.date :date
       t.string :provider
       t.belongs_to :vehicle
-
+      t.string :avatar
+      
       t.timestamps null: false
     end
   end

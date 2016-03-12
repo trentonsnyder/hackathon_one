@@ -1,13 +1,15 @@
+<div class="container">
 <h1>Vehicles for: <%= current_user.username %></h1>
 <hr />
-<%= link_to 'Add Vehicle', new_vehicle_path, class: 'btn'%>
+<%= link_to 'Add Vehicle', new_vehicle_path, class: 'btn right aligned'%>
 <% if current_user.vehicles.any? %>
   <% @vehicles.each do |vehicle| %>
    <h2><%= link_to vehicle.carname, vehicle_path(vehicle) %></h2>
-   <%= link_to "Delete Vehicle", vehicle_path(vehicle), method: :delete, class: 'btn' %>
-   <%= link_to "Edit Vehicle", edit_vehicle_path(vehicle), class: 'btn' %>
+   <%= link_to "Delete", vehicle_path(vehicle), method: :delete, class: 'btn' %>
+   <%= link_to "Edit", edit_vehicle_path(vehicle), class: 'btn' %>
   <%end%>
 <% else %>
   <h2>You haven't added any vehicles.</h2>
   
 <% end %>  
+</div>

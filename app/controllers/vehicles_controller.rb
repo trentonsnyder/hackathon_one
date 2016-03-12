@@ -1,5 +1,5 @@
 class VehiclesController < ApplicationController
-  before_action :vehicle, only: [:show, :edit, :destroy ]
+  before_action :vehicle, only: [:show, :update, :edit, :destroy ]
   
   def index
     @vehicles = Vehicle.all
@@ -17,7 +17,7 @@ class VehiclesController < ApplicationController
     @vehicle = current_user.vehicles.new(vehicle_params)
     if @vehicle.save
       flash[:notice] = "#{@vehicle.model} saved."
-      redirect_to vehicles_path(current_user)
+      redirect_to vehicle_path(@vehicle)
     else 
       flash[:alert] = "There was an error while creating your vehicle."
       render :new
@@ -46,7 +46,7 @@ class VehiclesController < ApplicationController
 
  private
    def vehicle_params
-     params.require(:vehicle).permit(:make, :model, :year)
+     params.require(:vehicle).permit(:make, :model, :year, :avatar)
    end
    
    def vehicle

@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160312172349) do
     t.date     "date"
     t.string   "provider"
     t.integer  "vehicle_id"
+    t.string   "avatar"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160312172349) do
     t.string   "model",      null: false
     t.integer  "year",       null: false
     t.integer  "user_id"
+    t.string   "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,6 +1,7 @@
 <div class='center'>
   <h3><%= @vehicle.carname %></h3>
   <h4><%= @service.name %></h4>
+  <%= image_tag @service.avatar_url(:thumb) %>
   <p><%= @service.date %></p>
   <p>Provider: <%= @service.provider %></p>
   <p><%= @service.mileage %> Miles</p>
