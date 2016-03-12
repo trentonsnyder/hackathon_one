@@ -16,3 +16,7 @@ $link-color: color("orange", "darken-1") !default;
 @import 'todo';
 @import 'shared';
 @import 'vehicles';
+
+body {
+  background-color: #eeeeee;
+}
