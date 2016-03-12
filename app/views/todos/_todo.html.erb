@@ -1,0 +1,16 @@
+<div class='row'>
+  
+  <%= form_for @vehicle do |f| %>
+    
+    <div class='row'>
+      <div class="input-field col s12">
+        
+        <%= f.text_field :title, placeholder: 'Title', required: true, autofocus: true %>
+        <%= f.label :title %>
+      
+      </div>
+    </div>
+    
+    <%= f.submit 'Submit', class: 'btn black' %>
+  <% end %>
+</div>
