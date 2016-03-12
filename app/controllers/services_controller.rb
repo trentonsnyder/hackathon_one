@@ -14,7 +14,7 @@ class ServicesController < ApplicationController
   end
 
   def create
-    if @service = @vehicle.service.create(service_params)
+    if @service = @vehicle.services.create(service_params)
       flash[:notice] = "Service Saved"
     redirect_to vehicle_services_path(@vehicle)
     else 
@@ -24,6 +24,7 @@ class ServicesController < ApplicationController
   end
 
   def edit
+    @service = Service.find(params[:id])
   end
 
   def update
