@@ -16,6 +16,9 @@
     <ul class="right hide-on-med-and-down">
       <% if user_signed_in? %>
         <li>
+          <%= link_to 'Vehicles', vehicles_path %>
+        </li>
+        <li>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
         </li>
       <% else %>
@@ -34,8 +37,13 @@
 <div class="row">
   <div class="col s8">
     <%= yield %>
+  </div>
   <div class="col s4">
-  
-
+    <% if user_signed_in? %>
+      <ol>
+      <% current_user.to_do.each do |to_do| %>
+        <li><%= link_to to_do.title, todo_path(to_do) %></li>
+      </ol>
+</div>
 </body>
 </html>
