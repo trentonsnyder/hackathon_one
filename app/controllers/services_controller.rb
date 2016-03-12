@@ -28,8 +28,10 @@ class ServicesController < ApplicationController
   end
 
   def update
+    @service = Service.find(params[:id])
     if @service.update(service_params)
       flash[:notice] = "Service Updated"
+      redirect_to vehicle_service_path(@vehicle, @service)
     else
       render :edit 
     end
@@ -49,7 +51,7 @@ class ServicesController < ApplicationController
   end
 
   def service_params
-    params.require(:service).permit(:name, :provider, :date, :mileage)
+    params.require(:service).permit(:name, :provider, :date, :mileage, :description)
   end
 
 end

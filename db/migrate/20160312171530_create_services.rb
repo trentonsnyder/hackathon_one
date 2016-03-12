@@ -3,7 +3,7 @@ class CreateServices < ActiveRecord::Migration
     create_table :services do |t|
       t.integer :mileage
       t.string :name
-      t.string :body
+      t.string :description
       t.date :date
       t.string :provider
       t.belongs_to :vehicle
