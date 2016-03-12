@@ -5,4 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates_presence_of :username
+
+  after_create :create_todo
+
+  private
+    def create_todo
+      self.Todo = Todo.create
+    end
 end
