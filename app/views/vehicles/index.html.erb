@@ -6,6 +6,7 @@
    <%= link_to vehicle.carname, vehicle_path(vehicle) %>
    <%= link_to "Delete Vehicle", vehicle_path(vehicle), method: :delete %>
    <%= link_to "Edit Vehicle", edit_vehicle_path(vehicle) %>
+  <%end%>
 <% else %>
   <h2>You haven't added any vehicles.</h2>
   
