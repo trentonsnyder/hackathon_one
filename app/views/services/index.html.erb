@@ -1,11 +1,7 @@
-<div class='row'>
-<div class='center'>
+<div class="container">
   <h1>Services: <%= @vehicle.model %></h1>
-  <%= image_tag @vehicle.avatar_url(:thumb) %>
-</div>
-
-<%= link_to "Add Service", new_vehicle_service_path(@vehicle), class: 'btn' %>
 <br />
+<%= link_to "Add Service", new_vehicle_service_path(@vehicle), class: 'btn' %>
 <% @services.each do |service| %>
   <h3><%= link_to service.name, vehicle_service_path(@vehicle, service) %> Miles: <%= service.mileage %></h3>
 <% end %>
