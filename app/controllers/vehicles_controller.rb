@@ -17,7 +17,7 @@ class VehiclesController < ApplicationController
     @vehicle = current_user.vehicles.new(vehicle_params)
     if @vehicle.save
       flash[:notice] = "#{@vehicle.model} saved."
-      redirect_to vehicles_path(current_user)
+      redirect_to vehicle_path(@vehicle)
     else 
       flash[:alert] = "There was an error while creating your vehicle."
       render :new

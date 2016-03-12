@@ -39,8 +39,8 @@ class TodosController < ApplicationController
   def destroy
     title = @todo.title
     @todo.destroy
-    flash[:notice] = "Todo Item removed successfully!"
-    redirect_to(:back)
+    flash[:notice] = "#{title} removed successfully!"
+    redirect_to todos_path
   end
 
   private
