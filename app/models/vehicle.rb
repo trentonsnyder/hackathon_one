@@ -4,7 +4,6 @@ class Vehicle < ActiveRecord::Base
     
     validates_presence_of :make, :model, :year
     
-    private 
       def carname 
         " #{self.year} #{self.make} #{self.model}"       
       end
