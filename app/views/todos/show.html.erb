@@ -1,2 +1,4 @@
-<h1>Todo#show</h1>
-<p>Find me in app/views/todo/show.html.erb</p>
+<h1><%= @todo.title.titleize %></h1>
+<br />
+<%= link_to 'Edit', edit_todo_path(@todo) %>
+<%= link_to 'Delete', todo_path(@todo), method: :delete %>

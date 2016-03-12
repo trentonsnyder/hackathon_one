@@ -15,10 +15,10 @@ class TodosController < ApplicationController
   def create
     @todo = current_user.todos.new(todo_params)
     if @todo.save
-      flash[:notice] = "Successful added item to todo list!"
+      flash[:notice] = "Successfully added item to Todo List!"
       redirect_to vehicles_path
     else
-      flash[:alert] = "Errors while saving todo item."
+      flash[:alert] = "Errors while saving Todo item."
       render :new
     end
   end
@@ -40,12 +40,12 @@ class TodosController < ApplicationController
     title = @todo.title
     @todo.destroy
     flash[:notice] = "Todo Item removed successfully!"
-    redirect_to todos_path
+    redirect_to vehicles_path
   end
 
   private
     def todo
-      @todo = current_user.Todo.find(params[:id])
+      @todo = Todo.find(params[:id])
     end
 
     def todo_params
