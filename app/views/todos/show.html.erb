@@ -1,4 +1,6 @@
-<h1><%= @todo.title.titleize %></h1>
-<br />
-<%= link_to 'Edit', edit_todo_path(@todo) %>
-<%= link_to 'Delete', todo_path(@todo), method: :delete %>
+<div class="container">
+  <h1><%= @todo.title.titleize %></h1>
+  <br />
+  <%= link_to 'Edit', edit_todo_path(@todo), class: 'btn' %>
+  <%= link_to 'Delete', todo_path(@todo), class: 'btn', method: :delete %>
+</div>

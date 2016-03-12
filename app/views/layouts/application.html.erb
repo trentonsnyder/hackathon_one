@@ -38,8 +38,8 @@
   <div class="col s10">
     <%= yield %>
   </div>
-  <div class="col s2 grey darken-4 todo_column">
-    <% if user_signed_in? %>
+  <% if user_signed_in? %>
+    <div class="col s2 grey darken-4 todo_column">
       <div class="row">
         <h4 class="white-text col s9">To Do</h4>
         <%= link_to '+', new_todo_path, class: 'btn-floating todo_link center' %>
@@ -49,7 +49,7 @@
         <li><%= link_to todo.title, todo_path(todo) %></li>
       <% end %>
     </ol>
-  <% end %>
   </div>
+<% end %>
 </body>
 </html>
