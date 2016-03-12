@@ -30,7 +30,7 @@ class VehiclesController < ApplicationController
   def update
     if @vehicle.update(vehicle_params)
       flash[:notice] = "#{@vehicle.model} updated"
-      redirect_to vehicles_path(current_user)
+      redirect_to vehicle_path(@vehicle)
     else
       flash[:alert] = "There was an error updating your vehicle"
       render :edit
