@@ -6,7 +6,7 @@ class ServicesController < ApplicationController
   end
 
   def show
-    @service = Service.find(params[:vehicle_id])
+    @service = Service.find(params[:id])
   end
 
   def new
@@ -51,7 +51,7 @@ class ServicesController < ApplicationController
   end
 
   def service_params
-    params.require(:service).permit(:name, :provider, :date, :mileage, :description)
+    params.require(:service).permit(:name, :provider, :date, :mileage, :description, :avatar)
   end
 
 end

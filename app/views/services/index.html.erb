@@ -1,8 +1,8 @@
 <div class='row'>
 <div class='center'>
   <h1>Services: <%= @vehicle.model %></h1>
+  <%= image_tag @vehicle.avatar_url(:thumb) %>
 </div>
-
 
 <%= link_to "Add Service", new_vehicle_service_path(@vehicle), class: 'btn' %>
 <br />
@@ -11,3 +11,5 @@
 <% end %>
 
 </div>
+
+

@@ -1,4 +1,5 @@
 class Vehicle < ActiveRecord::Base
+    mount_uploader :avatar, AvatarUploader
     belongs_to :user
     has_many :services, dependent: :destroy
     
