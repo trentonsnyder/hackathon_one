@@ -40,7 +40,7 @@ class TodosController < ApplicationController
     title = @todo.title
     @todo.destroy
     flash[:notice] = "Todo Item removed successfully!"
-    redirect_to vehicles_path
+    redirect_to(:back)
   end
 
   private
