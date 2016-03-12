@@ -5,6 +5,7 @@ class CreateVehicles < ActiveRecord::Migration
       t.string :model, null: false
       t.integer :year, null: false
       t.belongs_to :user
+      t.string :avatar
 
       t.timestamps null: false
     end
