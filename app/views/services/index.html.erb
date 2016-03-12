@@ -2,6 +2,8 @@
   <h1>Services: <%= @vehicle.model %></h1>
 </div>
 
+<%= link_to "Add Service", new_vehicle_service(@vehicle), class: 'btn' %>
+
 <% @services.each do |service| %>
   <%= service.name %>
 <% end %>
