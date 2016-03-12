@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(version: 20160312172349) do
   create_table "services", force: :cascade do |t|
     t.integer  "mileage"
     t.string   "name"
-    t.string   "body"
+    t.string   "description"
     t.date     "date"
     t.string   "provider"
     t.integer  "vehicle_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "todos", force: :cascade do |t|
