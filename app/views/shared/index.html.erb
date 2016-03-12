@@ -1,5 +1,18 @@
-<h1>Home Page</h1>
-
-<!-- button to sign up
-
-button to login -->
+<div class="container">
+  <h1>Maintenance Log</h1>
+  <hr />
+  <% if user_signed_in? %>
+    <h3 class="orange-text"><%= current_user.username %></h3>
+  <% else %>
+    <h3>Welcome to your new vehicle maintenance log.</h3>
+    <p>Clean out your glove box. We've got you covered.</p>
+      <ul>
+        <li>With Maintenance Log you can:</li>
+        <li>&nbsp&nbsp&nbspAdd all of your vehicles</li>
+        <li>&nbsp&nbsp&nbspKeep track of all of your repairs, oil changes, etc.</li>
+        <li>&nbsp&nbsp&nbspCreate a list of future repairs, errands, and projects</li>
+      </ul>
+    <h3>So what are you waiting for!</h3>
+    <h3>Sign up (or log back in)</h3>
+  <% end %>
+</div>
