@@ -1,2 +1,12 @@
-<h1>Vehicles#index</h1>
-<p>Find me in app/views/vehicles/index.html.erb</p>
+<h1>Vehicles for: <%= current_user.username %></h1>
+<hr />
+<%= link_to 'Add Vehicle' new_vehicle_path %>
+<% if current_user.vehicles.any? %>
+  <% @vehicles.each do |vehicle| %>
+   <%= link_to vehicle.carname, vehicle_path(vehicle) %>
+   <%= link_to "Delete Vehicle", vehicle_path(vehicle), method: :delete %>
+   <%= link_to "Edit Vehicle", edit_vehicle_path(vehicle) %>
+<% else %>
+  <h2>You haven't added any vehicles.</h2>
+  
+<% end %>  

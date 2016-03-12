@@ -6,6 +6,7 @@ class VehiclesController < ApplicationController
   end
   
   def show
+    redirect_to vehicle_services_path(@vehicle)
   end
 
   def new
