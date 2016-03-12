@@ -20,6 +20,7 @@ class TodosController < ApplicationController
     else
       flash[:alert] = "Errors while saving todo item."
       render :new
+    end
   end
 
   def edit
@@ -50,7 +51,6 @@ class TodosController < ApplicationController
     def todo_params
       params.require(:todo).permit(:title)
     end
-
 end
 
 
