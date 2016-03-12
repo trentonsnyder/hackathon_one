@@ -44,7 +44,7 @@ class ServicesController < ApplicationController
   private
 
   def vehicle
-    @vehicle = current_user.vehicles.find(params[:vehicle_id])
+   @vehicle = current_user.vehicles.find(params[:vehicle_id])
   end
 
   def service_params
