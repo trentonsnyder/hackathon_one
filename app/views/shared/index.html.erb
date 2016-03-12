@@ -3,9 +3,9 @@
   <hr />
   <% if user_signed_in? %>
     <% if current_user.vehicles.count < 2 %>
-      <h3 class="orange-text">You have <%= link_to "#{current_user.vehicles.count} vehicle", vehicles_path %></h3>
+      <h3><%= link_to "You have #{current_user.vehicles.count} vehicle", vehicles_path %></h3>
     <% else %>
-      <h3 class="orange-text">You have <%= link_to "#{current_user.vehicles.count} vehicles", vehicles_path %></h3>
+      <h3><%= link_to "You have #{current_user.vehicles.count} vehicles", vehicles_path %></h3>
     <% end %>
   <% else %>
     <h3>Welcome to your new vehicle maintenance log.</h3>
