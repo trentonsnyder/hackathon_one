@@ -1,0 +1,16 @@
+<div class="row">
+<% if user_signed_in? %>
+  <div class="grey darken-4 todo_column">    
+      <div class='col s12'>
+        <h4 class="white-text">To Do
+        <%= link_to '+', new_todo_path, class: 'btn-floating todo_link center' %>
+        </h4> 
+        <ol class="todo_list">
+          <% current_user.todos.each do |todo| %>
+            <li><%= link_to todo.title, todo_path(todo) %></li>
+          <% end %>
+        </ol>
+      </div> 
+    </div>
+<% end %>
+</div>

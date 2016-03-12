@@ -40,7 +40,7 @@ class TodosController < ApplicationController
     title = @todo.title
     @todo.destroy
     flash[:notice] = "#{title} removed successfully!"
-    redirect_to todos_path
+    redirect_to root_path
   end
 
   private

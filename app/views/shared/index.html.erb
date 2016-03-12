@@ -1,8 +1,12 @@
 <div class="container">
-  <h1>Maintenance Log</h1>
+  <h1>Maintenance Log for <%= current_user.username %></h1>
   <hr />
   <% if user_signed_in? %>
-    <h3 class="orange-text"><%= current_user.username %></h3>
+    <% if current_user.vehicles.count < 2 %>
+      <h3 class="orange-text">You have <%= current_user.vehicles.count %> vehicle</h3>
+    <% else %>
+      <h3 class="orange-text">You have <%= current_user.vehicles.count %> vehicles</h3>
+    <% end %>
   <% else %>
     <h3>Welcome to your new vehicle maintenance log.</h3>
     <p>Clean out your glove box. We've got you covered.</p>
