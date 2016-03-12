@@ -1,8 +1,8 @@
-class ServiceController < ApplicationController
+class ServicesController < ApplicationController
   before_action :vehicle 
 
   def index
-    @service = @vehicle.service 
+    @services = @vehicle.service 
   end
 
   def show
