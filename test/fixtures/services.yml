@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mileage: 1
+  name: MyString
+  date: 2016-03-12
+  provider: MyString
+
+two:
+  mileage: 1
+  name: MyString
+  date: 2016-03-12
+  provider: MyString
