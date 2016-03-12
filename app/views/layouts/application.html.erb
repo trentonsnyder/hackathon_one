@@ -44,7 +44,7 @@
         <h4 class="white-text col s9">To Do</h4>
         <%= link_to '+', new_todo_path, class: 'btn-floating todo_link center' %>
       </div>
-      <ol>
+      <ol class="todo_list">
       <% current_user.todos.each do |todo| %>
         <li><%= link_to todo.title, todo_path(todo) %></li>
       <% end %>
