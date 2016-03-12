@@ -1,0 +1,33 @@
+<div class='row'>
+  <%= form_for @service do |f| %>
+    <div class='row'>
+      <div class="input-field col s12">
+      <%= f.text_field :service %>
+      <%= f.label :name, autofocus: true %>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="input-field col s12">
+      <%= f.text_area :description, class: 'materialize-textarea' %>
+      <%= f.label :body %>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="input-field col s12">
+      <%= f.date_select :date %>
+      <%= f.label :date %>
+      </div>
+    </div>
+    
+    <div class='row'>
+      <div class="input-field col s12">
+      <%= f.select :provider, ['Self', 'Shop'] %>
+      <%= f.label :provider %>
+      </div>
+    </div>
+
+    <%= f.submit 'Submit', class: 'btn black' %>
+  <% end %>
+</div>
