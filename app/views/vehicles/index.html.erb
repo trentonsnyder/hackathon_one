@@ -1,6 +1,6 @@
 <h1>Vehicles for: <%= current_user.username %></h1>
 <hr />
-<%= link_to 'Add Vehicle' new_vehicle_path %>
+<%= link_to 'Add Vehicle', new_vehicle_path %>
 <% if current_user.vehicles.any? %>
   <% @vehicles.each do |vehicle| %>
    <%= link_to vehicle.carname, vehicle_path(vehicle) %>
