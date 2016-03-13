@@ -7,9 +7,9 @@
 }
 
 .black-border {
-  font-weight: bold;
-   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: black;
+  color: black;
 }
 
+.index-vehicle-img {
+  height: 220px;
+}

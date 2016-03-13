@@ -12,12 +12,14 @@
 <div class="row">
   <% @vehicles.each do |vehicle| %>
     <div class="col s4">
-      <div class="card small">
+      <div class="card">
         <div class="card-image index-vehicle-img">
-          <img src="<%= vehicle.avatar_url%>" class: ''/>
-            <span class="card-title"><%= link_to vehicle.carname, vehicle_path(vehicle), class: 'white-text black-border' %></span>
+          <img src="<%= vehicle.avatar_url %>" class= 'index-vehicle-img'/>
             </div>
             <div class="card-action">
+            <div class='center'>
+              <p><%= link_to vehicle.carname, vehicle_path(vehicle), class: 'black-border' %></p>
+            </div>
               <%= link_to "Delete", vehicle_path(vehicle), method: :delete, class: 'btn' %>
               <%= link_to "Edit", edit_vehicle_path(vehicle), class: 'btn' %>
             </div>
