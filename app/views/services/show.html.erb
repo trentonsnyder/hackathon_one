@@ -3,7 +3,7 @@
   <h3><%= @vehicle.carname %></h3>
   <h5><%= @service.name %></h5>
     <ul>
-      <li>&nbsp&nbsp&nbsp&nbsp<%= @service.date %></li>
+      <li>&nbsp&nbsp&nbsp&nbsp<%= @service.date.to_s %></li>
       <li>&nbsp&nbsp&nbsp&nbspProvider: <%= @service.provider %></li>
       <li>&nbsp&nbsp&nbsp&nbsp<%= @service.mileage %> Miles</li>
       <li>&nbsp&nbsp&nbsp&nbsp<%= @service.description %></li>
