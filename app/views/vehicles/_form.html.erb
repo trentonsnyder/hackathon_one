@@ -2,27 +2,27 @@
   <%= form_for @vehicle do |f| %>
     <div class='row'>
       <div class="input-field col s12">
-      <label>Make</label>
+      <h6>Make</h6>
       <%= f.text_field :make, autofocus: true, required: true %>
       </div>
     </div>
 
     <div class='row'>
       <div class="input-field col s12">
-      <label>Model</label>
+      <h6>Model</h6>
       <%= f.text_field :model %>
       </div>
     </div>
 
     <div class='row'>
       <div class="input-field col s12">
-      <label>Year</label>
+      <h6>Year</h6>
       <%= f.number_field :year, min: 1950, max: 2016, required: true %>
       </div>
     </div>
 
     <div class='row'>
-      <label>File</label>
+      <h6>File</h6>
       <div class="file-field input-field">
         <div class="btn">
           <span>File</span>

@@ -9,34 +9,34 @@
 
     <div class='row'>
       <div class="input-field col s12">
-      <label>Description</label>
+      <h6>Description</h6>
       <%= f.text_area :description, class: 'materialize-textarea' %>
       </div>
     </div>
 
     <div class='row'>
       <div class="input-field col s12">
-      <label>Milage(required)</label>
+      <h6>Milage(required)</h6>
       <%= f.text_field :mileage, required: true %>
       </div>
     </div>
 
     <div class='row'>
-      <label>Provider</label>
+      <h6>Provider</h6>
       <div class="input-field col s2">
         <%= f.select :provider, ['Self', 'Shop'], {}, class: 'browser-default' %>
       </div> 
     </div>
 
     <div class='row'>
-      <label>Date</label>
+      <h6>Date</h6>
       <div class="input-field col s2">
         <%= f.date_field :date %>
       </div>
     </div>     
 
     <div class='row'>
-      <label>File</label>
+      <h6>File</h6>
       <div class="file-field input-field">
         <div class="btn">
           <span>File</span>
