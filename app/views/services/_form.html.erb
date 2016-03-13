@@ -2,8 +2,8 @@
   <%= form_for [@vehicle, @service] do |f| %>
     <div class='row'>
       <div class="input-field col s12">
-      <%= f.text_field :name %>
-      <%= f.label :service, autofocus: true %>
+      <%= f.text_field :name, required: true, autofocus: true %>
+      <%= f.label :service %>
       </div>
     </div>
 
