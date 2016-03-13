@@ -16,7 +16,6 @@ class ServicesController < ApplicationController
   def create
     if @service = @vehicle.services.create(service_params)
       flash[:notice] = "Service Saved"
-      binding.pry
     redirect_to vehicle_services_path(@vehicle)
     else 
       flash[:alert] = "Something went Wrong"
